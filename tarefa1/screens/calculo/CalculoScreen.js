@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, View, Text } from 'react-native';
+import { StyleSheet, View, Text, StatusBar } from 'react-native';
 import TextInputBox from '../../components/textInputBox/TextInputBox';
 import CustomButton from '../../components/customButtom/CustomButtom';
 import { Picker } from '@react-native-picker/picker';
@@ -14,7 +13,7 @@ function CalculoScreen() {
 
   return (
     <View style={styles.container}>
-      <StatusBar style="auto" />
+      <StatusBar barStyle="dark-content" />
 
       <Text style={styles.title}>Calculadora</Text>
 
