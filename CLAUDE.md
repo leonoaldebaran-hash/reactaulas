@@ -47,5 +47,6 @@
 | `tarefa5` | Agenda: perfil (dados e foto), cadastro de atividade e agenda |
 | `tarefa6` | Agenda com Drawer, cadastro e lista de atividades (Context), aba Timers (cronômetro e Pomodoro) |
 | `miniProjetoP1` | Mini projeto P1: Drawer como menu principal + Tab Navigator dentro de "Sobre" (Sobre simples e Perfil fake) + Quiz de Ocarina of Time (3 perguntas, acertos e erros). Prints em `miniProjetoP1/prints/` |
+| `tarefa7` | API (cap. 11): `apis/Apis.js` com `fetch` na The Cat API, tela `screens/gato/GatoScreen.js` mostra a imagem (`data[0].url`) e botão para buscar outro gato. Prints em `tarefa7/prints/` |
 
 Observação do `miniProjetoP1`: na entrega, a pergunta 3 do quiz ficou com a resposta "30" chaves, mas o Templo da Água tem 6 chaves pequenas; e a pergunta 1 tinha erros de digitação ("sage", "conlcuir", "??"). O aluno foi avisado.
