@@ -13,4 +13,7 @@ export default StyleSheet.create({
     fontWeight: 'bold',
     marginBottom: 20,
   },
+  mensagem: {
+    fontSize: 18,
+  },
 });
