@@ -15,5 +15,11 @@ export default StyleSheet.create({
   },
   mensagem: {
     fontSize: 18,
+    marginTop: 10,
+  },
+  digitando: {
+    fontSize: 16,
+    color: '#555',
+    marginTop: 10,
   },
 });
