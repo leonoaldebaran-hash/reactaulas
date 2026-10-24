@@ -15,6 +15,25 @@ class Apis {
       alert('Erro ao conectar com a API!');
     }
   }
+
+  static async criarUsuario(usuario) {
+    try {
+      const response = await fetch(URL_BASE, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(usuario),
+      });
+      if (!response.ok) {
+        alert(`Erro ao cadastrar o usuário (código ${response.status}).`);
+        return false;
+      }
+      return true;
+    } catch (error) {
+      console.error(error);
+      alert('Erro ao conectar com a API!');
+      return false;
+    }
+  }
 }
 
 export default Apis;

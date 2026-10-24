@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text } from 'react-native';
 import TextInputBox from '../../components/textInputBox/TextInputBox';
+import CustomButton from '../../components/customButtom/CustomButtom';
 import Apis from '../../apis/Apis';
 import Styles from './Style';
 
@@ -13,6 +14,23 @@ function UsuariosScreen() {
   useEffect(() => {
     Apis.listarUsuarios(setUsuarios);
   }, []);
+
+  async function cadastrar() {
+    if (!nome || !telefone || !endereco) {
+      alert('Preencha nome, telefone e endereço.');
+      return;
+    }
+
+    const criou = await Apis.criarUsuario({ nome, telefone, endereco });
+
+    if (criou) {
+      alert('Usuário cadastrado com sucesso!');
+      setNome('');
+      setTelefone('');
+      setEndereco('');
+      Apis.listarUsuarios(setUsuarios);
+    }
+  }
 
   return (
     <View style={Styles.container}>
@@ -37,7 +55,12 @@ function UsuariosScreen() {
         placeholder="Endereço"
       />
 
-      <Text style={Styles.digitando}>Nome digitado: {nome}</Text>
+      <CustomButton
+        title="Cadastrar"
+        onPress={cadastrar}
+        style={Styles.button}
+      />
+
       <Text style={Styles.mensagem}>Total de usuários: {usuarios.length}</Text>
     </View>
   );

@@ -13,13 +13,12 @@ export default StyleSheet.create({
     fontWeight: 'bold',
     marginBottom: 20,
   },
+  button: {
+    marginTop: 10,
+    width: '80%',
+  },
   mensagem: {
     fontSize: 18,
-    marginTop: 10,
-  },
-  digitando: {
-    fontSize: 16,
-    color: '#555',
-    marginTop: 10,
+    marginTop: 20,
   },
 });
